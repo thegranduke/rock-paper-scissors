@@ -6,4 +6,16 @@ function getComputerChoice(possibleChoices){
     return computerChoice;
 }
 
-console.log(getComputerChoice(possibleChoices));
+function getPlayerChoice(){
+    let userChoice = prompt("Enter rock, paper or scissors");
+    userChoice = userChoice.toLowerCase();
+    userChoice = userChoice.trim();
+    if (possibleChoices.includes(userChoice)){
+        return userChoice;
+    }
+    else{
+        console.log("Invalid value entered")
+    }
+}
+
+console.log(getPlayerChoice())
