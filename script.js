@@ -24,26 +24,28 @@ function getPlayerChoice(){
 
 
 function playRound(getComputerChoice,getPlayerChoice){
-    let verdict = null;
+    let winner = null;
     let playerChoice = getPlayerChoice()
     let computerChoice = getComputerChoice()
 
     if (computerChoice == playerChoice){
-        verdict = "It's a draw!"
+        console.log("It's a draw!");
     }
     else if ( playerChoice == "rock" && computerChoice== "scissor" ||
               playerChoice == "paper" && computerChoice == "rock" ||
               playerChoice == "scissor" && computerChoice == "paper" 
             ){
         
-        verdict = `You win! ${playerChoice} beats ${computerChoice}`;
+        winner = "player";
+        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
 
     }
     else {
-        verdict = `You lose! ${computerChoice} beats ${playerChoice}`;
+        winner = "computer";
+        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
     }
 
-    return verdict
+    return winner;
 }
 
 function playGame(playRound,NUMBER_OF_ROUNDS){
@@ -51,14 +53,12 @@ function playGame(playRound,NUMBER_OF_ROUNDS){
     let computerScore = 0;
 
     for (let i = 0; i < NUMBER_OF_ROUNDS; i++){
-        let verdict = playRound(getComputerChoice,getPlayerChoice);
-        console.log(verdict);
-        verdict = verdict.charAt(4);
-        if (verdict == "w"){
-            playerScore = playerScore + 1;
+        let winner = playRound(getComputerChoice,getPlayerChoice);
+        if (winner == "player"){
+            playerScore++;
         }
-        else if (verdict == "l"){
-            computerScore = computerScore + 1;
+        else if (winner == "computer"){
+            computerScore++;
         }
     
     }
