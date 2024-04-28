@@ -1,4 +1,24 @@
+/*Section 1 styling*/
+.section1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
 
+}
+
+.section1 > div {
+    max-width: 125px;
+    max-height: 125px;
+    flex:1 1 auto;
+    text-align: center;
+
+}
+
+p{
+    font-weight: bolder;
+
+}
 
 /*Section 2 styling*/
 
@@ -37,7 +57,7 @@
 
 img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 /*Footer styling*/

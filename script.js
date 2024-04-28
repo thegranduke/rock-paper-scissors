@@ -9,7 +9,8 @@ function getComputerChoice(){
     return computerChoice;
 }
 
-
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound(getComputerChoice,playerPick){
     let winner = null;
@@ -17,26 +18,28 @@ function playRound(getComputerChoice,playerPick){
     let computerChoice = getComputerChoice()
 
     if (computerChoice == playerChoice){
-        console.log("It's a draw!");
+        winner = "It's a draw!";
     }
     else if ( playerChoice == "rock" && computerChoice== "scissor" ||
               playerChoice == "paper" && computerChoice == "rock" ||
               playerChoice == "scissor" && computerChoice == "paper" 
             ){
         
-        winner = "player";
-        console.log(`You win! ${playerChoice} beats ${computerChoice}`);
+        winner = `You win! ${playerChoice} beats ${computerChoice}`;
+        playerScore++;
 
     }
     else {
-        winner = "computer";
-        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+        winner = `You lose! ${computerChoice} beats ${playerChoice}`;
+        computerScore++;
     }
 
     return {
         "winner":winner,
         "playerChoice":playerChoice,
-        "computerChoice":computerChoice
+        "computerChoice":computerChoice,
+        "playerScore":playerScore,
+        "computerScore":computerScore
     };
 }
 
@@ -72,12 +75,18 @@ const paperButton = document.querySelector(".paper-button");
 const scissorButton = document.querySelector(".scissor-button");
 const playerChoiceImage = document.querySelector(".playerChoiceImage");
 const computerChoiceImage = document.querySelector(".computerChoiceImage");
+const roundMessage = document.querySelector(".message");
+const playerScoreItem = document.querySelector(".playerScore");
+const computerScoreItem = document.querySelector(".computerScore");
 
 rockButton.addEventListener("click", () => {
     let results = playRound(getComputerChoice,"rock");
     playerChoiceImage.src = "images/rock.jpg";
     computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
-    console.log(results.computerChoice)
+    roundMessage.textContent = results.winner;
+    console.log(results.winner)
+    playerScoreItem.textContent = results.playerScore;
+    computerScoreItem.textContent = results.computerScore;
 
 
 });
@@ -86,13 +95,19 @@ paperButton.addEventListener("click", () => {
     let results = playRound(getComputerChoice,"rock");
     playerChoiceImage.src = "images/paper.jpg";
     computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
+    roundMessage.textContent = results.winner;
     console.log(playerChoiceImage.src)
+    playerScoreItem.textContent = results.playerScore;
+    computerScoreItem.textContent = results.computerScore;
 });
 
 scissorButton.addEventListener("click", () => {
     let results = playRound(getComputerChoice,"rock");
     playerChoiceImage.src = "images/scissor.jpg";
     computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
+    roundMessage.textContent = results.winner;
     console.log(playerChoiceImage.src)
+    playerScoreItem.textContent = results.playerScore;
+    computerScoreItem.textContent = results.computerScore;
 });
 
