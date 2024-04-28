@@ -33,7 +33,11 @@ function playRound(getComputerChoice,playerPick){
         console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
     }
 
-    return winner;
+    return {
+        "winner":winner,
+        "playerChoice":playerChoice,
+        "computerChoice":computerChoice
+    };
 }
 
 function playGame(playRound,NUMBER_OF_ROUNDS){
@@ -66,16 +70,29 @@ function playGame(playRound,NUMBER_OF_ROUNDS){
 const rockButton = document.querySelector(".rock-button");
 const paperButton = document.querySelector(".paper-button");
 const scissorButton = document.querySelector(".scissor-button");
+const playerChoiceImage = document.querySelector(".playerChoiceImage");
+const computerChoiceImage = document.querySelector(".computerChoiceImage");
 
 rockButton.addEventListener("click", () => {
-    playRound(getComputerChoice,"rock");
+    let results = playRound(getComputerChoice,"rock");
+    playerChoiceImage.src = "images/rock.jpg";
+    computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
+    console.log(results.computerChoice)
+
+
 });
 
 paperButton.addEventListener("click", () => {
-    playRound(getComputerChoice,"paper");
+    let results = playRound(getComputerChoice,"rock");
+    playerChoiceImage.src = "images/paper.jpg";
+    computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
+    console.log(playerChoiceImage.src)
 });
 
 scissorButton.addEventListener("click", () => {
-    playRound(getComputerChoice,"scissor");
+    let results = playRound(getComputerChoice,"rock");
+    playerChoiceImage.src = "images/scissor.jpg";
+    computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
+    console.log(playerChoiceImage.src)
 });
 
