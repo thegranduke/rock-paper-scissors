@@ -6,7 +6,7 @@
     align-items: center;
     gap: 10px;
 }
-.section3 > div {
+.section3 > button {
     max-width: 100px;
     max-height: 100px;
     flex:1 1 auto;
