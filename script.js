@@ -75,3 +75,8 @@ function playGame(playRound,NUMBER_OF_ROUNDS){
 }
 
 console.log(playGame(playRound,NUMBER_OF_ROUNDS));
+
+
+let rockButton = document.getElementsByClassName("rock-button");
+let paperBUtton = document.getElementsByClassName("paper-button");
+let scissorButton = document.getElementsByClassName("scissor-button");
