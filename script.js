@@ -79,14 +79,27 @@ const roundMessage = document.querySelector(".message");
 const playerScoreItem = document.querySelector(".playerScore");
 const computerScoreItem = document.querySelector(".computerScore");
 
+
+
+
 rockButton.addEventListener("click", () => {
     let results = playRound(getComputerChoice,"rock");
     playerChoiceImage.src = "images/rock.jpg";
     computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
     roundMessage.textContent = results.winner;
-    console.log(results.winner)
     playerScoreItem.textContent = results.playerScore;
     computerScoreItem.textContent = results.computerScore;
+
+    if (playerScore >= 5 || computerScore >= 5){
+        if (playerScore > computerScore){
+            roundMessage.textContent = "Player Wins!!!";
+        }
+        else{
+            roundMessage.textContent = "Computer Wins!!!"
+        }
+        playerScore = 0;
+        computerScore = 0;
+    }
 
 
 });
@@ -96,9 +109,20 @@ paperButton.addEventListener("click", () => {
     playerChoiceImage.src = "images/paper.jpg";
     computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
     roundMessage.textContent = results.winner;
-    console.log(playerChoiceImage.src)
     playerScoreItem.textContent = results.playerScore;
     computerScoreItem.textContent = results.computerScore;
+
+    if (playerScore >= 5 || computerScore >= 5){
+        if (playerScore > computerScore){
+            roundMessage.textContent = "Player Wins!!!";
+        }
+        else{
+            roundMessage.textContent = "Computer Wins!!!"
+        }
+        playerScore = 0;
+        computerScore = 0;
+    }
+
 });
 
 scissorButton.addEventListener("click", () => {
@@ -106,8 +130,19 @@ scissorButton.addEventListener("click", () => {
     playerChoiceImage.src = "images/scissor.jpg";
     computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
     roundMessage.textContent = results.winner;
-    console.log(playerChoiceImage.src)
     playerScoreItem.textContent = results.playerScore;
     computerScoreItem.textContent = results.computerScore;
+
+    if (playerScore >= 5 || computerScore >= 5){
+        if (playerScore > computerScore){
+            roundMessage.textContent = "Player Wins!!!";
+        }
+        else{
+            roundMessage.textContent = "Computer Wins!!!"
+        }
+        playerScore = 0;
+        computerScore = 0;
+    }
+    
 });
 

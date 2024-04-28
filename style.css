@@ -1,8 +1,23 @@
+body{
+    margin : 0px;
+}
+
+/*header styling*/
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background-color: lightgray;
+}
+
+
 /*Section 1 styling*/
 .section1{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 10px;
     margin-bottom: 100px;
 
 }
@@ -13,6 +28,10 @@
     flex:1 1 auto;
     text-align: center;
 
+}
+
+.round-message {
+    align-self: flex-end;
 }
 
 p{
@@ -37,6 +56,7 @@ p{
     padding-bottom: 10px;
     text-align: center;
     flex:1 1 auto;
+    
 
 }
 /*Section 3 styling*/
