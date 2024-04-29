@@ -81,10 +81,10 @@ const computerScoreItem = document.querySelector(".computerScore");
 
 
 
+function buttonClickHandler(choice){
 
-rockButton.addEventListener("click", () => {
-    let results = playRound(getComputerChoice,"rock");
-    playerChoiceImage.src = "images/rock.jpg";
+    let results = playRound(getComputerChoice,choice);
+    playerChoiceImage.src = "images/" + choice + ".jpg";
     computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
     roundMessage.textContent = results.winner;
     playerScoreItem.textContent = results.playerScore;
@@ -101,48 +101,9 @@ rockButton.addEventListener("click", () => {
         computerScore = 0;
     }
 
+}
 
-});
-
-paperButton.addEventListener("click", () => {
-    let results = playRound(getComputerChoice,"rock");
-    playerChoiceImage.src = "images/paper.jpg";
-    computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
-    roundMessage.textContent = results.winner;
-    playerScoreItem.textContent = results.playerScore;
-    computerScoreItem.textContent = results.computerScore;
-
-    if (playerScore >= 5 || computerScore >= 5){
-        if (playerScore > computerScore){
-            roundMessage.textContent = "Player Wins!!!";
-        }
-        else{
-            roundMessage.textContent = "Computer Wins!!!"
-        }
-        playerScore = 0;
-        computerScore = 0;
-    }
-
-});
-
-scissorButton.addEventListener("click", () => {
-    let results = playRound(getComputerChoice,"rock");
-    playerChoiceImage.src = "images/scissor.jpg";
-    computerChoiceImage.src = "images/" + results.computerChoice + ".jpg";
-    roundMessage.textContent = results.winner;
-    playerScoreItem.textContent = results.playerScore;
-    computerScoreItem.textContent = results.computerScore;
-
-    if (playerScore >= 5 || computerScore >= 5){
-        if (playerScore > computerScore){
-            roundMessage.textContent = "Player Wins!!!";
-        }
-        else{
-            roundMessage.textContent = "Computer Wins!!!"
-        }
-        playerScore = 0;
-        computerScore = 0;
-    }
-    
-});
+rockButton.addEventListener("click", () => {buttonClickHandler("rock")});
+paperButton.addEventListener("click",() => {buttonClickHandler("paper")});
+scissorButton.addEventListener("click",() => {buttonClickHandler("scissor")});
 
