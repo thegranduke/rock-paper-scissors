@@ -18,7 +18,7 @@ header {
     height: 50px;
     background-color: #171717;
     color: #aca7cb;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -46,7 +46,7 @@ header {
 .round-message {
     align-self: flex-end;
     min-width: 200px;
-    font-size: 30px;
+    font-size: 20px;
     color: #aca7cb;
 }
 
