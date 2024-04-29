@@ -82,6 +82,7 @@ const computerScoreItem = document.querySelector(".computerScore");
 
 
 function buttonClickHandler(choice){
+    roundMessage.style.color = "#aca7cb";
 
     let results = playRound(getComputerChoice,choice);
     playerChoiceImage.src = "images/" + choice + ".jpg";
@@ -92,9 +93,11 @@ function buttonClickHandler(choice){
 
     if (playerScore >= 5 || computerScore >= 5){
         if (playerScore > computerScore){
+            roundMessage.style.color = "#8083ff";
             roundMessage.textContent = "Player Wins!!!";
         }
         else{
+            roundMessage.style.color = "#8083ff";
             roundMessage.textContent = "Computer Wins!!!"
         }
         playerScore = 0;
