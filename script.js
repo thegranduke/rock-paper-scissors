@@ -56,7 +56,7 @@ const computerScoreItem = document.querySelector(".computerScore");
 
 
 function buttonClickHandler(choice){
-    roundMessage.style.color = "#aca7cb";
+    roundMessage.style.color = "#171717";
 
     let results = playRound(getComputerChoice,choice);
     playerChoiceImage.src = "images/" + choice + ".jpg";
@@ -64,15 +64,15 @@ function buttonClickHandler(choice){
     roundMessage.textContent = results.winner;
     playerScoreItem.textContent = results.playerScore;
     computerScoreItem.textContent = results.computerScore;
-    roundMessage.textContent = results.winner;
+    console.log(roundMessage.textContent);
 
     if (playerScore >= 5 || computerScore >= 5){
         if (playerScore > computerScore){
-            roundMessage.style.color = "#8083ff";
+            roundMessage.style.color = "white";
             roundMessage.textContent = "Player Wins!!!";
         }
         else{
-            roundMessage.style.color = "#8083ff";
+            roundMessage.style.color = "white";
             roundMessage.textContent = "Computer Wins!!!"
         }
         playerScore = 0;
