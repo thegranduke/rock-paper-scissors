@@ -43,32 +43,6 @@ function playRound(getComputerChoice,playerPick){
     };
 }
 
-function playGame(playRound,NUMBER_OF_ROUNDS){
-    let playerScore = 0;
-    let computerScore = 0;
-
-    for (let i = 0; i < NUMBER_OF_ROUNDS; i++){
-        let winner = playRound(getComputerChoice,playerPick);
-        if (winner == "player"){
-            playerScore++;
-        }
-        else if (winner == "computer"){
-            computerScore++;
-        }
-    
-    }
-
-    if (playerScore == computerScore){
-        return "Its a draw!";
-    }
-    else if (playerScore > computerScore){
-        return "You win!";  
-    }  
-    else{
-        return "Computer wins!";
-    }
-}
-
 
 const rockButton = document.querySelector(".rock-button");
 const paperButton = document.querySelector(".paper-button");
@@ -90,6 +64,7 @@ function buttonClickHandler(choice){
     roundMessage.textContent = results.winner;
     playerScoreItem.textContent = results.playerScore;
     computerScoreItem.textContent = results.computerScore;
+    roundMessage.textContent = results.winner;
 
     if (playerScore >= 5 || computerScore >= 5){
         if (playerScore > computerScore){

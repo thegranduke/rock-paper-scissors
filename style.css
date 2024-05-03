@@ -1,7 +1,7 @@
 html, body{
     margin : 0px;
-    background-color: #171717;
-    color: #aca7cb;
+    background-color: #aca7cb;
+    color: #171717;
     font-weight: bolder;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -46,8 +46,12 @@ header {
 .round-message {
     align-self: flex-end;
     min-width: 200px;
-    font-size: 20px;
-    color: #aca7cb;
+    font-size: 25px;
+    color: #171717;
+}
+
+.message{
+    color: #171717;
 }
 
 
@@ -93,7 +97,7 @@ p{
     padding: 0px;
     flex:1 1 auto;
     border:0px;
-    background-color: #171717;
+    background-color: #aca7cb;
 }
 
 img{
@@ -111,20 +115,20 @@ button:hover{
 }
 
 button > img:hover{
-    border: 3px solid #aca7cb;
+    border: 3px solid #171717;
 }
 
 /*Footer styling*/
 
 footer {
-    background-color:#171717;
+    background-color: #aca7cb;
     height: 30px;
-    color: white;
+    color: #171717;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: auto;
-    font-size: 15px;
+    font-size: 16px;
     flex:1;
 
 }
@@ -135,7 +139,7 @@ footer > div{
 }
 
 footer:hover{
-    color: #aca7cb;
+    color: white;
 }
 
 
