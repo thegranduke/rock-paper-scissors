@@ -81,3 +81,5 @@ This project combines HTML, CSS, and JavaScript to bring the classic game of Roc
 2. The computer randomly selects its move.
 3. Scores are updated based on the outcome.
 4. Victory is declared when a score reaches 5.
+
+Ready to play? Clone the repo, open the game, and show the computer who's boss! or play it live [here]https://thegranduke.github.io/rock-paper-scissors/
