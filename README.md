@@ -6,11 +6,11 @@ Welcome to **Rock Paper Scissors**, a fun and interactive implementation of the 
 
 ## Table of Contents
 
-1. [Overview](https://www.notion.so/Job-description-13ffd8aef4bd8099ae7dd34e801f92a1?pvs=21)
-2. [How to Play](https://www.notion.so/Job-description-13ffd8aef4bd8099ae7dd34e801f92a1?pvs=21)
-3. [Features](https://www.notion.so/Job-description-13ffd8aef4bd8099ae7dd34e801f92a1?pvs=21)
-4. [Installation and Setup](https://www.notion.so/Job-description-13ffd8aef4bd8099ae7dd34e801f92a1?pvs=21)
-5. [Code Structure](https://www.notion.so/Job-description-13ffd8aef4bd8099ae7dd34e801f92a1?pvs=21)
+1. Overview
+2. How to Play
+3. Features
+4. Installation and Setup
+5. Code Structure
 
 ---
 
